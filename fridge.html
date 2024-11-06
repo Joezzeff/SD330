@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title> E04 Create a 'fridge display' using interactive JS </title>
+	<meta charset="UTF-8">
+</head>
+
+<style>
+	body { text-align: center; }
+	div { background-color: lightgray; border: solid black; border-width: 5px; width: 30%; margin: 0 auto; }
+</style>
+
+<body onload="doStartClock();">
+	<h1> REFRIGERATOR DISPLAY </h1>
+
+	<div id="display">
+		<br>
+		<p> Current Time: <span id="timePar" style="color: red;"> 00:00:00 
+			</span> <input type=button onclick="toggleTimeFormat()" id="toggleFormatButton" value="12hr">
+		</p>
+		<input type=button onclick="turnOnDisplay()" id="OnButton" value="ON">
+		<input type=button onclick="turnOffDisplay()" id="OffButton" value="OFF">
+		<br>
+		<br>
+		<p id="fridgeArea"> </p>
+		<br>
+		<br>
+		<p id="imageArea"> </p>
+		<br>
+		<br>
+	</div>
+
+	<footer>
+		<hr>
+		<small>&copy; JOZEF MASELEK 2024</small>
+	</footer>
+
+	<script src="fridgeJS.js">
+	</script>
+
+</body>
+
+</html>

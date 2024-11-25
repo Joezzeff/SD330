@@ -1,0 +1,149 @@
+{
+  "parkingLots": [
+    {
+      "name": "Foy Lot",
+      "mapFilename": "mapFoy.jpg",
+      "totalSpaces": 100,
+      "comments": "Near the Foy and Upper New townhouses, is usually relegated to faculty only parking.",
+      "securityLevel": "Medium",
+      "GroundQuality": "Average",
+      "UnderConstruction": false,
+      "parkingSpaces": [
+        {
+          "spaceId": "1",
+          "type": "Student",
+          "status": "Available",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "2",
+          "type": "Faculty/Staff",
+          "status": "Filled",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "3",
+          "type": "Handicap",
+          "status": "Available",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "4",
+          "type": "Reserved",
+          "status": "Reserved",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "5",
+          "type": "Student",
+          "status": "Filled",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "6",
+          "type": "Faculty/Staff",
+          "status": "Available",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "7",
+          "type": "Handicap",
+          "status": "Reserved",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "8",
+          "type": "Student",
+          "status": "Filled",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "9",
+          "type": "Faculty/Staff",
+          "status": "Available",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "10",
+          "type": "Student",
+          "status": "Available",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "11",
+          "type": "Faculty/Staff",
+          "status": "Filled",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        },
+        {
+          "spaceId": "12",
+          "type": "Student",
+          "status": "Available",
+          "filledDateTime": null,
+          "reservedDateTime": null
+        }
+      ]
+    },
+    {
+      "name": "Hoop Lot",
+      "mapFilename": "mapHoop.jpg",
+      "totalSpaces": 150,
+      "comments": "Near North Field and McCormick in North End.",
+      "securityLevel": "Low",
+      "GroundQuality": "Poor",
+      "UnderConstruction": true,
+      "parkingSpaces": []
+    },
+    {
+      "name": "Fontaine Lot",
+      "mapFilename": "mapFontaine.jpg",
+      "totalSpaces": 50,
+      "comments": "Near Fontaine and McCormick in North End, almost always filled.",
+      "securityLevel": "Medium",
+      "GroundQuality": "Poor",
+      "UnderConstruction": false,
+      "parkingSpaces": []
+    },
+    {
+      "name": "Dyson Lot",
+      "mapFilename": "mapDyson.jpg",
+      "totalSpaces": 50,
+      "comments": "Near Dyson, usually regulated to Staff parking.",
+      "securityLevel": "Medium",
+      "GroundQuality": "Good",
+      "UnderConstruction": false,
+      "parkingSpaces": []
+    },
+    {
+      "name": "Tennis Courts Lot",
+      "mapFilename": "mapTennisCourts.jpg",
+      "totalSpaces": 75,
+      "comments": "Near Ward and Lavelle in North End, one of the more remote parking lots on campus.",
+      "securityLevel": "Low",
+      "GroundQuality": "Average",
+      "UnderConstruction": false,
+      "parkingSpaces": []
+    },
+    {
+      "name": "Sheehan Lot",
+      "mapFilename": "mapSheehan.jpg",
+      "totalSpaces": 50,
+      "comments": "Near the gymnasium.",
+      "securityLevel": "High",
+      "GroundQuality": "Average",
+      "UnderConstruction": false,
+      "parkingSpaces": []
+    }
+  ]
+}

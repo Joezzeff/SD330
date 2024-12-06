@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Parking Spaces</title>
+
+	<script>
+		async function fetchParkingSpaces() {
+		try {
+			const response = await fetch("https://raw.githubusercontent.com/joezzeff/SD330/main/parking.json");
+			const data = await response.json();
+		
+			const foyLot = data.parkingLots.find(lot => lot.name === "Foy Lot");
+
+			if (foyLot && foyLot.parkingSpaces.length > 0) {
+				let htmlString = `<h2>Spaces in ${foyLot.name}</h2>`;
+				htmlString += `<p>Comments: ${foyLot.comments}</p>`;
+				htmlString += `<p>Total Spaces: ${foyLot.totalSpaces}</p>`;
+				htmlString += `<ul>`;
+				for (let space of foyLot.parkingSpaces) {
+					htmlString += `
+					<li>
+						<strong>Space ID:</strong> ${space.spaceId}<br>
+						<strong>Type:</strong> ${space.type}<br>
+						<strong>Status:</strong> ${space.status}<br>
+						<strong>Filled DateTime:</strong> ${space.filledDateTime || "N/A"}<br>
+						<strong>Reserved DateTime:</strong> ${space.reservedDateTime || "N/A"}
+					</li><br>
+					`;
+				}
+				htmlString += `</ul>`;
+					document.getElementById("spacesData").innerHTML = htmlString;
+				} else {
+					document.getElementById("spacesData").innerHTML = `<p>No spaces available for the Foy Lot.</p>`;
+				}
+			} catch (error) {
+				console.error("Failed to fetch parking spaces:", error);
+				document.getElementById("spacesData").innerText = "Failed to load parking spaces data.";
+			}
+		}
+		document.addEventListener("DOMContentLoaded", fetchParkingSpaces);
+	</script>
+</head>
+
+<body style="background-image: url('maristbg.jpg'); background-size: cover; text-align: center;">
+	<div id="spacesData" style="background-color: white; width: 40%; margin: 0 auto; padding: 5px;">
+	
+	<h1>Parking Spaces</h1>
+	Loading spaces data...
+	</div>
+	<h1 style="background-color: white; width: 40% margin: 0 auto;"> <a href="parking.html"> Return to Home </a> </h1>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Parking Home</title>
+
+	<script>
+		async function fetchParkingData() {
+			try {
+				const response = await fetch("https://raw.githubusercontent.com/joezzeff/SD330/main/parking.json");
+				const data = await response.json();
+
+				let htmlString = "<h2>Parking Lots</h2>";
+				for (let lot of data.parkingLots) {
+					htmlString += `
+						<p><strong>${lot.name}</strong></p>
+						<p>Comments: ${lot.comments}</p>
+						<p>Total Spaces: ${lot.totalSpaces}</p>
+						<p>Security Level: ${lot.securityLevel}</p>
+					`;
+				}
+			document.getElementById("parkingData").innerHTML = htmlString;
+			} catch (error) {
+			console.error("Failed to fetch parking data:", error);
+			document.getElementById("parkingData").innerText = "Failed to load parking lot data.";
+			}
+		}
+		document.addEventListener("DOMContentLoaded", fetchParkingData);
+	</script>
+</head>
+
+<body style="background-image: url('maristbg.jpg'); background-size: cover; text-align: center;">
+	<div id="parkingData" style="background-color: white; width: 40%; margin: 0 auto; padding: 5px;">
+	<h1>Welcome to Parking Manager</h1>
+	Loading parking data...
+	</div>
+	<h1 style="background-color: white; width: 40% margin: 0 auto;"> <a href="parking.html"> Return to Home </a> </h1>
+
+</body>
+
+</html>
